@@ -14,7 +14,11 @@ window.addEventListener('load', function () {
 
         var bc = document.getElementById("bc");
         var col = bc.getElementsByClassName("seo-breadcrumb-text");
-        var a = col[col.length-1];
+        var a = col[col.length - 1];
+
+        if (a.getAttribute("href").includes("/p/"))
+            a = col[col.length - 2];
+
         var catIdArr = a.getAttribute("href").split("/");
         var catId = catIdArr[catIdArr.length - 2];
 
