@@ -12,15 +12,7 @@
 window.addEventListener('load', function () {
     setTimeout(() => {
 
-        var bc = document.getElementById("bc");
-        var col = bc.getElementsByClassName("seo-breadcrumb-text");
-        var a = col[col.length - 1];
-
-        if (a.getAttribute("href").includes("/p/"))
-            a = col[col.length - 2];
-
-        var catIdArr = a.getAttribute("href").split("/");
-        var catId = catIdArr[catIdArr.length - 2];
+        var catId = document.getElementById("desc_ifr").src.split('&category=')[1].split('&')[0];
 
         var h2 = document.createElement("h2");
         h2.innerText = "Category ID: " + catId;
