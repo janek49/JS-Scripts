@@ -56,7 +56,7 @@ function checkAllTheBoxes() {
 
   for (let i = 0; i < els.length; i++) {
     let el = els[i];
-    if (!el.checked) {
+    if (el.checked) {
       el.click();
     }
   }
